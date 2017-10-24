@@ -1,4 +1,4 @@
-﻿namespace SqlConnectorApp
+﻿namespace WinFormApp
 {
     partial class MainForm
     {
