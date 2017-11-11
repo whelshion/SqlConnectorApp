@@ -14,6 +14,7 @@ namespace EFCoreApp
     {
         public static void Main(string[] args)
         {
+            //LoginUtil.getInstance().init();
             BuildWebHost(args).Run();
         }
 

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
+using com.ultrapower.casp.client;
 
 namespace EFCoreMySqlApp
 {
@@ -11,6 +12,7 @@ namespace EFCoreMySqlApp
     {
         public static void Main(string[] args)
         {
+            //LoginUtil.getInstance().init();
             var host = new WebHostBuilder()
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())

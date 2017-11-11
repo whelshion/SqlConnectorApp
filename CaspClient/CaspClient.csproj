@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.6</TargetFramework>
+    <Version>1.6.0</Version>
+    <Authors>Cyrus Zhou</Authors>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Excel.Coms.Tech</Company>
+    <Product>四川系统集成接口类库</Product>
+    <Description>四川系统集成接口类库</Description>
+    <Copyright>TIM</Copyright>
+    <PackageLicenseUrl>http://www.rosas.com.cn/excelcomstech/</PackageLicenseUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Common\Code\CodeMess.properties" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Common\Code\CodeMess.properties">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="1.1.2" />
+    <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
+    <PackageReference Include="System.Xml.XmlDocument" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+</Project>

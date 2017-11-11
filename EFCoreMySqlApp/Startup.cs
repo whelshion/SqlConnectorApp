@@ -9,6 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using EFCoreApp.Data;
 using Microsoft.EntityFrameworkCore;
+using EFCoreMySqlApp.SoapServices;
+using System.ServiceModel;
+using SoapMiddleware;
 
 namespace EFCoreMySqlApp
 {
@@ -34,6 +37,7 @@ namespace EFCoreMySqlApp
                 options => options.UseMySQL(Configuration.GetConnectionString("MySqlContext"))
                 );
             services.AddMvc();
+            services.AddScoped<WebService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +57,7 @@ namespace EFCoreMySqlApp
             }
 
             app.UseStaticFiles();
-
+            app.UseSoapMiddleware<WebService>("/WebService.svc", new BasicHttpBinding());
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -61,5 +65,6 @@ namespace EFCoreMySqlApp
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
         }
+        
     }
 }
