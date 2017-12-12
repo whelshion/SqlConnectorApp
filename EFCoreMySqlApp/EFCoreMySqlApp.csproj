@@ -37,14 +37,4 @@
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SoapMiddleware\SoapMiddleware.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="CaspClient">
-      <HintPath>..\packages\Others\CaspClient.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

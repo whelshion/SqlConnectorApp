@@ -12,12 +12,12 @@ namespace CaspClient.Common.DataTran
         {
             dataTranMap = new Dictionary<string, string>
             {
-                {"14", "Client.DataTran.ClientTranXmlImpl"},
-                {"12", "Client.DataTran.ClientTranXmlImpl"},
-                {"13", "Client.DataTran.ClientTranXmlImpl"},
-                {"11", "Client.DataTran.ClientTranXmlImpl"},
-                {"21", "Client.DataTran.ClientTranXmlImpl"},
-                {"41", "Client.DataTran.ClientTranStrImpl"}
+                {"14", "CaspClient.Client.DataTran.ClientTranXmlImpl"},
+                {"12", "CaspClient.Client.DataTran.ClientTranXmlImpl"},
+                {"13", "CaspClient.Client.DataTran.ClientTranXmlImpl"},
+                {"11", "CaspClient.Client.DataTran.ClientTranXmlImpl"},
+                {"21", "CaspClient.Client.DataTran.ClientTranXmlImpl"},
+                {"41", "CaspClient.Client.DataTran.ClientTranStrImpl"}
             };
         }
 

@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.IO;
+using System.Net;
 using System.Net.Http;
+using System.Net.Sockets;
 using System.Text;
 
 namespace ConsoleApp
@@ -17,6 +19,8 @@ namespace ConsoleApp
 
         static void Main(string[] args)
         {
+            //TestSCAccountWS();
+            TestTcpSocket();
             //TestDateTimeJson();
             TestHttpModule();
             var builder = new ConfigurationBuilder()
@@ -71,6 +75,39 @@ namespace ConsoleApp
                     break;
                 }
             }
+        }
+
+        private static void TestSCAccountWS()
+        {
+            var wsClient = new SCAccountWS.AccountServiceSoapClient(SCAccountWS.AccountServiceSoapClient.EndpointConfiguration.AccountServiceSoap12, "http://localhost:31692");
+            var result = wsClient.queryUsersAsync().Result;
+            Console.WriteLine(JsonConvert.SerializeObject(result));
+            Console.ReadKey();
+        }
+
+        private static void TestTcpSocket()
+        {
+            TcpListener listener = new TcpListener(IPAddress.Any, 9999);
+            listener.Start();
+            while (true)
+            {
+                TcpClient client = listener.AcceptTcpClient();//接受一个Client  
+
+                byte[] buffer = new byte[client.ReceiveBufferSize];
+
+                NetworkStream stream = client.GetStream();//获取网络流  
+
+                stream.Read(buffer, 0, buffer.Length);//读取网络流中的数据  
+
+                stream.Close();//关闭流  
+
+                client.Close();//关闭Client  
+
+                string receiveString = Encoding.UTF8.GetString(buffer).Trim('\0');//转换成字符串  
+
+                Console.WriteLine(receiveString);
+            }
+            Console.ReadKey();
         }
 
         private static void TestDateTimeJson()

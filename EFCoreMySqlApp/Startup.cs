@@ -11,7 +11,6 @@ using EFCoreApp.Data;
 using Microsoft.EntityFrameworkCore;
 using EFCoreMySqlApp.SoapServices;
 using System.ServiceModel;
-using SoapMiddleware;
 
 namespace EFCoreMySqlApp
 {
@@ -57,7 +56,7 @@ namespace EFCoreMySqlApp
             }
 
             app.UseStaticFiles();
-            app.UseSoapMiddleware<WebService>("/WebService.svc", new BasicHttpBinding());
+            //app.UseSoapMiddleware<WebService>("/WebService.svc", new BasicHttpBinding());
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

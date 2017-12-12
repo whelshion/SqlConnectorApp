@@ -28,6 +28,10 @@ namespace CaspClient.Client
             return LoginUtil.loginUtil;
         }
 
+        /// <summary>
+        /// casp_client_config.xml相对目录
+        /// </summary>
+        /// <param name="path"></param>
         public void init(string path)
         {
             CaspConfigUtil.init(path);

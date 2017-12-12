@@ -11,7 +11,7 @@ namespace CaspClient.Common.Encrypt
         static EncrypterMapping()
         {
             encrypterMap = new Dictionary<string, string> {
-                {"1", "Common.Encrypt.DESEncryptImpl"}
+                {"1", "CaspClient.Common.Encrypt.DESEncryptImpl"}
             };
         }
 

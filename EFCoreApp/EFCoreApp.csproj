@@ -23,4 +23,14 @@
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CaspClient\CaspClient.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="casp_client_config.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

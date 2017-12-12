@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2006
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormApp", "SqlConnectorApp\WinFormApp.csproj", "{B285896D-209D-480E-A0FE-D32E740639B6}"
 EndProject
@@ -13,7 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCoreMySqlApp", "EFCoreMyS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoapMiddleware", "SoapMiddleware\SoapMiddleware.csproj", "{610F5116-E0B9-4241-A5B1-337CFB233CBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaspClient", "CaspClient\CaspClient.csproj", "{BE07F6F2-9EB4-47A2-B8EB-69A291B4325C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CaspClient", "CaspClient\CaspClient.csproj", "{BE07F6F2-9EB4-47A2-B8EB-69A291B4325C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityWebApp", "IdentityWebApp\IdentityWebApp.csproj", "{31D9E771-4F3E-49A3-B91F-9CD4B87E233F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketServer", "SocketServer\SocketServer.csproj", "{F5B556D6-E48F-4742-8A1A-E1F18DE248F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFrameworkConsole", "NetFrameworkConsole\NetFrameworkConsole.csproj", "{B904002D-06BF-48E6-9E48-6FF13A4DFECB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{BE07F6F2-9EB4-47A2-B8EB-69A291B4325C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BE07F6F2-9EB4-47A2-B8EB-69A291B4325C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BE07F6F2-9EB4-47A2-B8EB-69A291B4325C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D9E771-4F3E-49A3-B91F-9CD4B87E233F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D9E771-4F3E-49A3-B91F-9CD4B87E233F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D9E771-4F3E-49A3-B91F-9CD4B87E233F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D9E771-4F3E-49A3-B91F-9CD4B87E233F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5B556D6-E48F-4742-8A1A-E1F18DE248F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5B556D6-E48F-4742-8A1A-E1F18DE248F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5B556D6-E48F-4742-8A1A-E1F18DE248F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5B556D6-E48F-4742-8A1A-E1F18DE248F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B904002D-06BF-48E6-9E48-6FF13A4DFECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B904002D-06BF-48E6-9E48-6FF13A4DFECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B904002D-06BF-48E6-9E48-6FF13A4DFECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B904002D-06BF-48E6-9E48-6FF13A4DFECB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

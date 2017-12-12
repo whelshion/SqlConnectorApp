@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="findUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findUserResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="queryUsers">
+        <s:complexType />
+      </s:element>
+      <s:element name="queryUsersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="queryUsersResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modifyUserInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="userInfos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="modifyUserInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="modifyUserInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="findUserSoapIn">
+    <wsdl:part name="parameters" element="tns:findUser" />
+  </wsdl:message>
+  <wsdl:message name="findUserSoapOut">
+    <wsdl:part name="parameters" element="tns:findUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="queryUsersSoapIn">
+    <wsdl:part name="parameters" element="tns:queryUsers" />
+  </wsdl:message>
+  <wsdl:message name="queryUsersSoapOut">
+    <wsdl:part name="parameters" element="tns:queryUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyUserInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:modifyUserInfo" />
+  </wsdl:message>
+  <wsdl:message name="modifyUserInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:modifyUserInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AccountServiceSoap">
+    <wsdl:operation name="findUser">
+      <wsdl:input message="tns:findUserSoapIn" />
+      <wsdl:output message="tns:findUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="queryUsers">
+      <wsdl:input message="tns:queryUsersSoapIn" />
+      <wsdl:output message="tns:queryUsersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserInfo">
+      <wsdl:input message="tns:modifyUserInfoSoapIn" />
+      <wsdl:output message="tns:modifyUserInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AccountServiceSoap" type="tns:AccountServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findUser">
+      <soap:operation soapAction="http://tempuri.org/findUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUsers">
+      <soap:operation soapAction="http://tempuri.org/queryUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserInfo">
+      <soap:operation soapAction="http://tempuri.org/modifyUserInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AccountServiceSoap12" type="tns:AccountServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findUser">
+      <soap12:operation soapAction="http://tempuri.org/findUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryUsers">
+      <soap12:operation soapAction="http://tempuri.org/queryUsers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="modifyUserInfo">
+      <soap12:operation soapAction="http://tempuri.org/modifyUserInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountService">
+    <wsdl:port name="AccountServiceSoap" binding="tns:AccountServiceSoap">
+      <soap:address location="http://localhost:31692/WebService/AccountService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AccountServiceSoap12" binding="tns:AccountServiceSoap12">
+      <soap12:address location="http://localhost:31692/WebService/AccountService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

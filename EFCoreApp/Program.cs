@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using CaspClient.Client;
 
 namespace EFCoreApp
 {
@@ -14,7 +15,7 @@ namespace EFCoreApp
     {
         public static void Main(string[] args)
         {
-            //LoginUtil.getInstance().init();
+            LoginUtil.getInstance().init(Path.Combine(Environment.CurrentDirectory,"casp_client_config.xml"));
             BuildWebHost(args).Run();
         }
 
