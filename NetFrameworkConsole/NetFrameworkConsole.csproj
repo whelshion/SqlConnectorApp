@@ -44,6 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\GX4AService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\SCAccountWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -53,26 +58,39 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="Connected Services\SCAccountWS\AccountService.wsdl" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\GX4AService\GX4AService.wsdl" />
+    <None Include="Connected Services\GX4AService\NetFrameworkConsole.GX4AService.UpdateAppAcctSoapResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SCAccountWS\NetFrameworkConsole.SCAccountWS.delUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SCAccountWS\NetFrameworkConsole.SCAccountWS.findUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\SCAccountWS\NetFrameworkConsole.SCAccountWS.getUserAmountResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\SCAccountWS\NetFrameworkConsole.SCAccountWS.modifyUserInfoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\SCAccountWS\NetFrameworkConsole.SCAccountWS.queryUsersByPageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\SCAccountWS\NetFrameworkConsole.SCAccountWS.queryUsersResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\SCAccountWS\SCAccountWS.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\GX4AService\" />
     <WCFMetadataStorage Include="Connected Services\SCAccountWS\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SCAccountWS\AccountService.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\SCAccountWS\configuration91.svcinfo" />
@@ -82,6 +100,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\SCAccountWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GX4AService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GX4AService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\GX4AService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

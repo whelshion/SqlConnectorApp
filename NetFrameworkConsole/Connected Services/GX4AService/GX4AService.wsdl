@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UpdateAppAcctSoap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RequestInfo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateAppAcctSoapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateAppAcctSoapResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateAppAcctSoapSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateAppAcctSoap" />
+  </wsdl:message>
+  <wsdl:message name="UpdateAppAcctSoapSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateAppAcctSoapResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GX4AServiceSoap">
+    <wsdl:operation name="UpdateAppAcctSoap">
+      <wsdl:input message="tns:UpdateAppAcctSoapSoapIn" />
+      <wsdl:output message="tns:UpdateAppAcctSoapSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GX4AServiceSoap" type="tns:GX4AServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateAppAcctSoap">
+      <soap:operation soapAction="http://tempuri.org/UpdateAppAcctSoap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GX4AServiceSoap12" type="tns:GX4AServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdateAppAcctSoap">
+      <soap12:operation soapAction="http://tempuri.org/UpdateAppAcctSoap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GX4AService">
+    <wsdl:port name="GX4AServiceSoap" binding="tns:GX4AServiceSoap">
+      <soap:address location="http://localhost:44199/WebService/GX4AService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GX4AServiceSoap12" binding="tns:GX4AServiceSoap12">
+      <soap12:address location="http://localhost:44199/WebService/GX4AService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

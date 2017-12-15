@@ -35,6 +35,27 @@ namespace NetFrameworkConsole.SCAccountWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/modifyUserInfo", ReplyAction="*")]
         System.Threading.Tasks.Task<NetFrameworkConsole.SCAccountWS.modifyUserInfoResponse> modifyUserInfoAsync(NetFrameworkConsole.SCAccountWS.modifyUserInfoRequest request);
+        
+        // CODEGEN: 命名空间 http://tempuri.org/ 的元素名称 userIDs 以后生成的消息协定未标记为 nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/delUser", ReplyAction="*")]
+        NetFrameworkConsole.SCAccountWS.delUserResponse delUser(NetFrameworkConsole.SCAccountWS.delUserRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/delUser", ReplyAction="*")]
+        System.Threading.Tasks.Task<NetFrameworkConsole.SCAccountWS.delUserResponse> delUserAsync(NetFrameworkConsole.SCAccountWS.delUserRequest request);
+        
+        // CODEGEN: 命名空间 http://tempuri.org/ 的元素名称 getUserAmountResult 以后生成的消息协定未标记为 nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getUserAmount", ReplyAction="*")]
+        NetFrameworkConsole.SCAccountWS.getUserAmountResponse getUserAmount(NetFrameworkConsole.SCAccountWS.getUserAmountRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/getUserAmount", ReplyAction="*")]
+        System.Threading.Tasks.Task<NetFrameworkConsole.SCAccountWS.getUserAmountResponse> getUserAmountAsync(NetFrameworkConsole.SCAccountWS.getUserAmountRequest request);
+        
+        // CODEGEN: 命名空间 http://tempuri.org/ 的元素名称 pageSize 以后生成的消息协定未标记为 nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/queryUsersByPage", ReplyAction="*")]
+        NetFrameworkConsole.SCAccountWS.queryUsersByPageResponse queryUsersByPage(NetFrameworkConsole.SCAccountWS.queryUsersByPageRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/queryUsersByPage", ReplyAction="*")]
+        System.Threading.Tasks.Task<NetFrameworkConsole.SCAccountWS.queryUsersByPageResponse> queryUsersByPageAsync(NetFrameworkConsole.SCAccountWS.queryUsersByPageRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -234,6 +255,207 @@ namespace NetFrameworkConsole.SCAccountWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class delUserRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="delUser", Namespace="http://tempuri.org/", Order=0)]
+        public NetFrameworkConsole.SCAccountWS.delUserRequestBody Body;
+        
+        public delUserRequest() {
+        }
+        
+        public delUserRequest(NetFrameworkConsole.SCAccountWS.delUserRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class delUserRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string userIDs;
+        
+        public delUserRequestBody() {
+        }
+        
+        public delUserRequestBody(string userIDs) {
+            this.userIDs = userIDs;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class delUserResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="delUserResponse", Namespace="http://tempuri.org/", Order=0)]
+        public NetFrameworkConsole.SCAccountWS.delUserResponseBody Body;
+        
+        public delUserResponse() {
+        }
+        
+        public delUserResponse(NetFrameworkConsole.SCAccountWS.delUserResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class delUserResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string delUserResult;
+        
+        public delUserResponseBody() {
+        }
+        
+        public delUserResponseBody(string delUserResult) {
+            this.delUserResult = delUserResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getUserAmountRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUserAmount", Namespace="http://tempuri.org/", Order=0)]
+        public NetFrameworkConsole.SCAccountWS.getUserAmountRequestBody Body;
+        
+        public getUserAmountRequest() {
+        }
+        
+        public getUserAmountRequest(NetFrameworkConsole.SCAccountWS.getUserAmountRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class getUserAmountRequestBody {
+        
+        public getUserAmountRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class getUserAmountResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="getUserAmountResponse", Namespace="http://tempuri.org/", Order=0)]
+        public NetFrameworkConsole.SCAccountWS.getUserAmountResponseBody Body;
+        
+        public getUserAmountResponse() {
+        }
+        
+        public getUserAmountResponse(NetFrameworkConsole.SCAccountWS.getUserAmountResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class getUserAmountResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string getUserAmountResult;
+        
+        public getUserAmountResponseBody() {
+        }
+        
+        public getUserAmountResponseBody(string getUserAmountResult) {
+            this.getUserAmountResult = getUserAmountResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class queryUsersByPageRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="queryUsersByPage", Namespace="http://tempuri.org/", Order=0)]
+        public NetFrameworkConsole.SCAccountWS.queryUsersByPageRequestBody Body;
+        
+        public queryUsersByPageRequest() {
+        }
+        
+        public queryUsersByPageRequest(NetFrameworkConsole.SCAccountWS.queryUsersByPageRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class queryUsersByPageRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string pageSize;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string pageNum;
+        
+        public queryUsersByPageRequestBody() {
+        }
+        
+        public queryUsersByPageRequestBody(string pageSize, string pageNum) {
+            this.pageSize = pageSize;
+            this.pageNum = pageNum;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class queryUsersByPageResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="queryUsersByPageResponse", Namespace="http://tempuri.org/", Order=0)]
+        public NetFrameworkConsole.SCAccountWS.queryUsersByPageResponseBody Body;
+        
+        public queryUsersByPageResponse() {
+        }
+        
+        public queryUsersByPageResponse(NetFrameworkConsole.SCAccountWS.queryUsersByPageResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class queryUsersByPageResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string queryUsersByPageResult;
+        
+        public queryUsersByPageResponseBody() {
+        }
+        
+        public queryUsersByPageResponseBody(string queryUsersByPageResult) {
+            this.queryUsersByPageResult = queryUsersByPageResult;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface AccountServiceSoapChannel : NetFrameworkConsole.SCAccountWS.AccountServiceSoap, System.ServiceModel.IClientChannel {
     }
@@ -332,6 +554,81 @@ namespace NetFrameworkConsole.SCAccountWS {
             inValue.Body = new NetFrameworkConsole.SCAccountWS.modifyUserInfoRequestBody();
             inValue.Body.userInfos = userInfos;
             return ((NetFrameworkConsole.SCAccountWS.AccountServiceSoap)(this)).modifyUserInfoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        NetFrameworkConsole.SCAccountWS.delUserResponse NetFrameworkConsole.SCAccountWS.AccountServiceSoap.delUser(NetFrameworkConsole.SCAccountWS.delUserRequest request) {
+            return base.Channel.delUser(request);
+        }
+        
+        public string delUser(string userIDs) {
+            NetFrameworkConsole.SCAccountWS.delUserRequest inValue = new NetFrameworkConsole.SCAccountWS.delUserRequest();
+            inValue.Body = new NetFrameworkConsole.SCAccountWS.delUserRequestBody();
+            inValue.Body.userIDs = userIDs;
+            NetFrameworkConsole.SCAccountWS.delUserResponse retVal = ((NetFrameworkConsole.SCAccountWS.AccountServiceSoap)(this)).delUser(inValue);
+            return retVal.Body.delUserResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<NetFrameworkConsole.SCAccountWS.delUserResponse> NetFrameworkConsole.SCAccountWS.AccountServiceSoap.delUserAsync(NetFrameworkConsole.SCAccountWS.delUserRequest request) {
+            return base.Channel.delUserAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<NetFrameworkConsole.SCAccountWS.delUserResponse> delUserAsync(string userIDs) {
+            NetFrameworkConsole.SCAccountWS.delUserRequest inValue = new NetFrameworkConsole.SCAccountWS.delUserRequest();
+            inValue.Body = new NetFrameworkConsole.SCAccountWS.delUserRequestBody();
+            inValue.Body.userIDs = userIDs;
+            return ((NetFrameworkConsole.SCAccountWS.AccountServiceSoap)(this)).delUserAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        NetFrameworkConsole.SCAccountWS.getUserAmountResponse NetFrameworkConsole.SCAccountWS.AccountServiceSoap.getUserAmount(NetFrameworkConsole.SCAccountWS.getUserAmountRequest request) {
+            return base.Channel.getUserAmount(request);
+        }
+        
+        public string getUserAmount() {
+            NetFrameworkConsole.SCAccountWS.getUserAmountRequest inValue = new NetFrameworkConsole.SCAccountWS.getUserAmountRequest();
+            inValue.Body = new NetFrameworkConsole.SCAccountWS.getUserAmountRequestBody();
+            NetFrameworkConsole.SCAccountWS.getUserAmountResponse retVal = ((NetFrameworkConsole.SCAccountWS.AccountServiceSoap)(this)).getUserAmount(inValue);
+            return retVal.Body.getUserAmountResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<NetFrameworkConsole.SCAccountWS.getUserAmountResponse> NetFrameworkConsole.SCAccountWS.AccountServiceSoap.getUserAmountAsync(NetFrameworkConsole.SCAccountWS.getUserAmountRequest request) {
+            return base.Channel.getUserAmountAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<NetFrameworkConsole.SCAccountWS.getUserAmountResponse> getUserAmountAsync() {
+            NetFrameworkConsole.SCAccountWS.getUserAmountRequest inValue = new NetFrameworkConsole.SCAccountWS.getUserAmountRequest();
+            inValue.Body = new NetFrameworkConsole.SCAccountWS.getUserAmountRequestBody();
+            return ((NetFrameworkConsole.SCAccountWS.AccountServiceSoap)(this)).getUserAmountAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        NetFrameworkConsole.SCAccountWS.queryUsersByPageResponse NetFrameworkConsole.SCAccountWS.AccountServiceSoap.queryUsersByPage(NetFrameworkConsole.SCAccountWS.queryUsersByPageRequest request) {
+            return base.Channel.queryUsersByPage(request);
+        }
+        
+        public string queryUsersByPage(string pageSize, string pageNum) {
+            NetFrameworkConsole.SCAccountWS.queryUsersByPageRequest inValue = new NetFrameworkConsole.SCAccountWS.queryUsersByPageRequest();
+            inValue.Body = new NetFrameworkConsole.SCAccountWS.queryUsersByPageRequestBody();
+            inValue.Body.pageSize = pageSize;
+            inValue.Body.pageNum = pageNum;
+            NetFrameworkConsole.SCAccountWS.queryUsersByPageResponse retVal = ((NetFrameworkConsole.SCAccountWS.AccountServiceSoap)(this)).queryUsersByPage(inValue);
+            return retVal.Body.queryUsersByPageResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<NetFrameworkConsole.SCAccountWS.queryUsersByPageResponse> NetFrameworkConsole.SCAccountWS.AccountServiceSoap.queryUsersByPageAsync(NetFrameworkConsole.SCAccountWS.queryUsersByPageRequest request) {
+            return base.Channel.queryUsersByPageAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<NetFrameworkConsole.SCAccountWS.queryUsersByPageResponse> queryUsersByPageAsync(string pageSize, string pageNum) {
+            NetFrameworkConsole.SCAccountWS.queryUsersByPageRequest inValue = new NetFrameworkConsole.SCAccountWS.queryUsersByPageRequest();
+            inValue.Body = new NetFrameworkConsole.SCAccountWS.queryUsersByPageRequestBody();
+            inValue.Body.pageSize = pageSize;
+            inValue.Body.pageNum = pageNum;
+            return ((NetFrameworkConsole.SCAccountWS.AccountServiceSoap)(this)).queryUsersByPageAsync(inValue);
         }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="3476d58a-8db0-4b55-b88f-a6fcd045b83e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="447390a7-1570-4c16-98c0-fa52f8b3550a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,10 +19,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="E:\wsdl\SCAccountWS.wsdl" Protocol="file" SourceId="1" />
+    <MetadataSource Address="E:\wsdl\GX4AService.wsdl" Protocol="file" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="SCAccountWS.wsdl" MetadataType="Wsdl" ID="2fd32862-4a9f-4b0a-aacf-43c206cde5b0" SourceId="1" SourceUrl="file:///E:/wsdl/SCAccountWS.wsdl" />
+    <MetadataFile FileName="GX4AService.wsdl" MetadataType="Wsdl" ID="f431f09a-3d7e-461d-809c-e10359df9a27" SourceId="1" SourceUrl="file:///E:/wsdl/GX4AService.wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

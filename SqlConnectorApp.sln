@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocketServer", "SocketServe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetFrameworkConsole", "NetFrameworkConsole\NetFrameworkConsole.csproj", "{B904002D-06BF-48E6-9E48-6FF13A4DFECB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceHostWeb", "WebServiceHostWeb\WebServiceHostWeb.csproj", "{0594369B-3834-4541-941E-B453C610F82F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{B904002D-06BF-48E6-9E48-6FF13A4DFECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B904002D-06BF-48E6-9E48-6FF13A4DFECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B904002D-06BF-48E6-9E48-6FF13A4DFECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0594369B-3834-4541-941E-B453C610F82F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0594369B-3834-4541-941E-B453C610F82F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0594369B-3834-4541-941E-B453C610F82F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0594369B-3834-4541-941E-B453C610F82F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
